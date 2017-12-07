@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AIND-Isolation-master.iml" filepath="$PROJECT_DIR$/.idea/AIND-Isolation-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AIND-Planning-master/.idea/AIND-Planning-master.iml" filepath="$PROJECT_DIR$/../AIND-Planning-master/.idea/AIND-Planning-master.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/IK/.idea/IK.iml" filepath="$USER_HOME$/PycharmProjects/IK/.idea/IK.iml" />
+    </modules>
+  </component>
+</project>

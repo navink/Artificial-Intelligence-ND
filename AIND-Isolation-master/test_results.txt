@@ -1,0 +1,146 @@
+Submission includes the following files:
+    game_agent.py
+
+************************************************************************
+                         Test Failure Feedback                          
+************************************************************************
+
+Failed Test: 2. Test functionality of MinimaxPlayer.minimax()
+----------------------------------------------------------------------
+AssertionError: False is not true : Your MinimaxAgent.minimax function did not visit every node in the game tree as player 1.  First check for off-by-one errors in your handling of the depth limiting. Then, especially if the number of nodes explored by your agent is too low, check everywhere you call to game.get_legal_moves() to make sure you are getting the legal moves for the appropriate player at each level of the game tree.  Finally, you may be using non-standard search optimizations that are not supported by the test cases.  The range of expansions accepted will vary slightly within the range indicated based on your termination condition.
+
+Expected number of visited nodes -- min: 2 max: 2
+Number of nodes your agent explored: 6
+
+Test Case Details:
+------------------
+Heuristic: open_move_score
+Depth limit: 1
+Initial Board State:
+     0   1   2   3   4   5   6   7   8
+0  |   |   |   |   |   |   | 1 |   |   | 
+1  |   |   | - | - |   | - |   |   |   | 
+2  |   |   | - | - | - | - |   | - |   | 
+3  |   | - | - | - |   | - | - |   |   | 
+4  |   |   | - | - |   | - | - |   |   | 
+5  | 2 |   | - | - | - | - | - |   |   | 
+6  |   |   |   | - | - | - | - |   |   | 
+7  |   |   |   |   |   |   |   |   |   | 
+8  |   |   |   |   |   |   |   |   |   | 
+
+game._board_state:
+[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 54]
+
+
+
+Failed Test: 5. Test interface of AlphaBetaPlayer.alphabeta()
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 366, in alphabeta
+    key=lambda m: self.min_value(game.forecast_move(m), depth))
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 366, in <lambda>
+    key=lambda m: self.min_value(game.forecast_move(m), depth))
+TypeError: min_value() missing 2 required positional arguments: 'alpha' and 'beta'
+
+
+Failed Test: 7. Test functionality of AlphaBetaPlayer.alphabeta()
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 366, in alphabeta
+    key=lambda m: self.min_value(game.forecast_move(m), depth))
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 366, in <lambda>
+    key=lambda m: self.min_value(game.forecast_move(m), depth))
+TypeError: min_value() missing 2 required positional arguments: 'alpha' and 'beta'
+
+
+Failed Test: 8. Test that alphabeta() raises SearchTimeout when the timer expires
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 366, in alphabeta
+    key=lambda m: self.min_value(game.forecast_move(m), depth))
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 366, in <lambda>
+    key=lambda m: self.min_value(game.forecast_move(m), depth))
+TypeError: min_value() missing 2 required positional arguments: 'alpha' and 'beta'
+
+
+Failed Test: 9. Test iterative deepening in AlphaBetaPlayer.get_move()
+----------------------------------------------------------------------
+AssertionError: False is not true : Your agent did not call the search function self.alphabeta() the expected number of times.  Iterative deepening should call the search function with sequential values until SearchTimeout is raised. SearchTimeout was set to be raised after 24 moves, and your agent called the search function 3 times.
+
+
+Failed Test: 10. Test that AlphaBetaPlayer successfully plays a full game
+----------------------------------------------------------------------
+Traceback (most recent call last):
+TypeError: min_value() missing 2 required positional arguments: 'alpha' and 'beta'
+
+During handling of the above exception, another exception occurred:
+
+AssertionError: Your agent raised an error while attempting to play a complete game against another agent.  Make sure that your agent can play an entire game -- including selecting initial moves on an empty board.
+Exception: min_value() missing 2 required positional arguments: 'alpha' and 'beta'
+
+
+Failed Test: 11. Test output interface of custom_score()
+----------------------------------------------------------------------
+AssertionError: [(1, 2), (2, 1)] is not an instance of <class 'float'> : The custom_score() function should return a floating point value, but your function returned <class 'list'>
+
+
+Failed Test: 12. Test output interface of custom_score_2()
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vmuser_rwvujemi/workspace/game_agent.py", line 62, in custom_score_2
+    return game.get_legal_moves(player) - game.get_legal_moves(not player)
+  File "/home/vmuser_rwvujemi/isolation/isolation.py", line 339, in get_legal_moves
+    return self.__get_moves(self.get_player_location(player))
+  File "/home/vmuser_rwvujemi/isolation/isolation.py", line 317, in get_player_location
+    "Invalid player in get_player_location: {}".format(player))
+RuntimeError: Invalid player in get_player_location: False
+
+
+Failed Test: 13. Test output interface of custom_score_3()
+----------------------------------------------------------------------
+AssertionError: [(1, 2), (2, 1)] is not an instance of <class 'float'> : The custom_score_3() function should return a floating point value, but your function returned <class 'list'>
+
+
+Failed Test: 14. Submission includes heuristic_analysis.pdf
+----------------------------------------------------------------------
+AssertionError: False is not true : You must submit a report named heuristic_analysis.pdf for review.
+
+
+Failed Test: 15. Submission includes research_review.pdf
+----------------------------------------------------------------------
+AssertionError: False is not true : You must submit a report named research_review.pdf for review.
+
+
+************************************************************************
+                          Test Result Summary                           
+************************************************************************
+
+1. Test output interface of MinimaxPlayer.minimax():                   .
+2. Test functionality of MinimaxPlayer.minimax():                      F
+3. Test that minimax() raises SearchTimeout when the timer expires:    .
+4. Test that MinimaxPlayer successfully plays a full game:             .
+5. Test interface of AlphaBetaPlayer.alphabeta():                      E
+6. Test the interface of AlphaBetaPlayer.get_move():                   .
+7. Test functionality of AlphaBetaPlayer.alphabeta():                  E
+8. Test that alphabeta() raises SearchTimeout when the timer expires:  E
+9. Test iterative deepening in AlphaBetaPlayer.get_move():             F
+10. Test that AlphaBetaPlayer successfully plays a full game:          F
+11. Test output interface of custom_score():                           F
+12. Test output interface of custom_score_2():                         E
+13. Test output interface of custom_score_3():                         F
+14. Submission includes heuristic_analysis.pdf:                        F
+15. Submission includes research_review.pdf:                           F
+
+------------------------------------------------------------------------
+            . - Test Passed    F - Test Failed    E - Error             
+
+--------------------------------------------------------------------------------
+
+Not all of the tests passed.  If you are really stuck, consider asking your classroom mentor for help.
+
+
+Details are available in isolation-result-96277.json.
+
+If you would like this version of the project to be reviewed,
+submit isolation-96277.zip to the reviews website.
+
